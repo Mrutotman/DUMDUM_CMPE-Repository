@@ -123,3 +123,42 @@ for letter in myInput:
 
 print(output)
 '''
+'''
+def area(shape, x, y = 0):
+   if shape == "triangle":
+       return 0.5 * x * y
+   elif shape == "square":
+       return x * x
+   elif shape == "circle":
+       return 3.1416 * x ** 2
+   elif shape == "cylinder":
+       return (2 * 3.1416 * x * y) + (2 * 3.1416 * x ** 2)
+   elif shape == "sphere":
+       return 4 * 3.1416 * x ** 2
+   else:
+       return 0
+
+x = 5
+y = 3
+
+#print(area("square",x,y))
+
+
+import time
+
+def countdown (num):
+    if num == "odd":
+        for i in range (0, 20, +1):
+            time.sleep(0.5)
+            print(2*i + 1)
+    elif num == "even":
+        for i in range (0, 20, +1):
+            time.sleep(0.5)
+            print(2*i)
+    else:
+        for i in range(0, 20, +1):
+            time.sleep(0.5)
+            print(i)
+
+countdown("even")
+'''
