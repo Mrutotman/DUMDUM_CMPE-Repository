@@ -1,0 +1,36 @@
+# I AM SO SIGMA 
+HELLO MY NAME IS RED COLBY S. DUMDUM, I AM SO SIGMA AND THIS IS FOR MY COMPUTER PROGRAMMING COURSE AKA CMPE 012.
+
+
+## MODULES SO FOR IN MY COURSE
+Complete:
+- Introduction, Computer 101, AI & Vibe Coding (09/06/25)
+- Tools & Environments (09/13/25)
+- GitHub (09/27/25)
+- PyCharm IDE, Import Libraries & Modules (10/04/25)
+- Syntax, Data, Operators, and Expressions (10/11/25)
+- Data Structures (10/25/25)
+- Control Flow (11/08/25)
+- Functions & Modularity (11/22/25)
+
+Incomplete:
+- Errors, Exceptions & Debugging  
+- Midterms Review  
+- File Handling  
+- Automation & Scripting  
+- GUI & Web Introduction  
+- Object-Oriented Programming (OOP) Basics  
+- OOP Advanced  
+- Integration & Mini Project  
+
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first
+to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## License
+
+[My Facebook](https://www.facebook.com/itsmepula08)<br>
