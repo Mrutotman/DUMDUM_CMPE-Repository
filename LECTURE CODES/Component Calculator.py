@@ -1,7 +1,7 @@
 import sys
 import time
 
-sys.path.append(r"C:\path\to\LECTURE CODES\Component Packages")  # folder containing Capacitance.py
+sys.path.append(r"C:\path\to\LECTURE CODES\Component Packages")
 
 import Capacitance
 import Inductance
@@ -18,85 +18,146 @@ def components():
     while True:
         time.sleep(1)
         selector = input(
-            "Please choose the type of calculation you want to perform (Capacitance/Inductance/Resistance): ").upper()
+            "Choose component (Capacitance / Inductance / Resistance): ").upper()
 
         match selector:
+
+            # --------------------- CAPACITANCE -----------------------
             case "CAPACITANCE":
-                print("Capacitance Calculator")
-                capCal = input("Please choose the calculation (BYMAT/BYCV/BYCURRENT/BYREACTANCE): ").upper()
+                print("\nCapacitance Calculator")
+                capCal = input("Choose calculation (BYMAT/BYCV/BYCURRENT/BYREACTANCE): ").upper()
+
                 match capCal:
-                    case "BYMAT": #(dielectric, area, distance)
+
+                    case "BYMAT":
                         print("Capacitance by material selected")
-                        dielectric = float(input("Please choose the dielectric constant of the material calculation: "))
-                        area = float(input("Please choose the area of the material calculation: "))
-                        distance = float(input("Please choose the length of the material calculation: "))
-                        capCalbyMat = Capacitance.byMaterial(dielectric, area, distance)
-                        print(capCalbyMat)
-                        break
+                        dielectric = float(input("Enter dielectric constant: "))
+                        area = float(input("Enter area (m^2): "))
+                        distance = float(input("Enter distance (m): "))
+                        result = Capacitance.byMaterial(dielectric, area, distance)
+                        print("Capacitance =", result, "F")
+                        return
 
-                    case "BYCV": #(charge, voltage)
-                        print("Capacitance by CV selected")
-                        # Capacitance.byCV(...)
-                        break
-                    case "BYCURRENT": #(capacitance, dv_dt)
+                    case "BYCV":
+                        print("Capacitance by Q/V selected")
+                        charge = float(input("Enter charge (C): "))
+                        voltage = float(input("Enter voltage (V): "))
+                        result = Capacitance.byCV(charge, voltage)
+                        print("Capacitance =", result, "F")
+                        return
+
+                    case "BYCURRENT":
                         print("Capacitance by current selected")
-                        # Capacitance.byCurrent(...)
-                        break
-                    case "BYREACTANCE": #(frequency, capacitance)
-                        print("Capacitance by reactance selected")
-                        # Capacitance.byReactance(...)
-                        break
-                    case _:
-                        print("Invalid selection for Capacitance")
-                        break
-                break
+                        capacitance = float(input("Enter capacitance (F): "))
+                        dv_dt = float(input("Enter dv/dt (V/s): "))
+                        result = Capacitance.byCurrent(capacitance, dv_dt)
+                        print("Current =", result, "A")
+                        return
 
+                    case "BYREACTANCE":
+                        print("Capacitance by reactance selected")
+                        frequency = float(input("Enter frequency (Hz): "))
+                        capacitance = float(input("Enter capacitance (F): "))
+                        result = Capacitance.byReactance(frequency, capacitance)
+                        print("Reactance =", result, "Ω")
+                        return
+
+                    case _:
+                        print("Invalid Capacitance option.")
+                        return
+
+            # --------------------- INDUCTANCE -----------------------
             case "INDUCTANCE":
-                print("Inductance Calculator")
-                inCal = input("Please choose the calculation (BYMAT/BYFLUX/BYVOLTAGE/BYREACTANCE): ").upper()
+                print("\nInductance Calculator")
+                inCal = input("Choose calculation (BYMAT/BYFLUX/BYVOLTAGE/BYREACTANCE): ").upper()
+
                 match inCal:
+
                     case "BYMAT":
                         print("Inductance by material selected")
-                        break
+                        permeability = float(input("Enter permeability: "))
+                        turns = int(input("Enter number of turns: "))
+                        length = float(input("Enter core length (m): "))
+                        area = float(input("Enter core area (m²): "))
+                        result = Inductance.byMaterial(permeability, turns, length, area)
+                        print("Inductance =", result, "H")
+                        return
+
                     case "BYFLUX":
                         print("Inductance by flux selected")
-                        break
+                        flux = float(input("Enter magnetic flux (Wb): "))
+                        current = float(input("Enter current (A): "))
+                        result = Inductance.byFlux(flux, current)
+                        print("Inductance =", result, "H")
+                        return
+
                     case "BYVOLTAGE":
                         print("Inductance by voltage selected")
-                        break
+                        voltage = float(input("Enter voltage (V): "))
+                        di_dt = float(input("Enter di/dt (A/s): "))
+                        result = Inductance.byVoltage(voltage, di_dt)
+                        print("Inductance =", result, "H")
+                        return
+
                     case "BYREACTANCE":
                         print("Inductance by reactance selected")
-                        break
-                    case _:
-                        print("Invalid selection for Inductance")
-                        break
-                break
+                        frequency = float(input("Enter frequency (Hz): "))
+                        inductance = float(input("Enter inductance (H): "))
+                        result = Inductance.byReactance(frequency, inductance)
+                        print("Reactance =", result, "Ω")
+                        return
 
+                    case _:
+                        print("Invalid Inductance option.")
+                        return
+
+            # --------------------- RESISTANCE -----------------------
             case "RESISTANCE":
-                print("Resistance Calculator")
-                resCal = input("Please choose the calculation (BYMAT/BYVI/BYVOLTAGE/BYPOWER): ").upper()
+                print("\nResistance Calculator")
+                resCal = input("Choose calculation (BYMAT/BYVI/BYVOLTAGE/BYPOWER): ").upper()
+
                 match resCal:
+
                     case "BYMAT":
                         print("Resistance by material selected")
-                        break
+                        resistivity = float(input("Enter resistivity (Ω·m): "))
+                        length = float(input("Enter length (m): "))
+                        area = float(input("Enter area (m²): "))
+                        result = Resistance.byMaterial(resistivity, length, area)
+                        print("Resistance =", result, "Ω")
+                        return
+
                     case "BYVI":
-                        print("Resistance by VI selected")
-                        break
+                        print("Resistance by V/I selected")
+                        voltage = float(input("Enter voltage (V): "))
+                        current = float(input("Enter current (A): "))
+                        result = Resistance.byVI(voltage, current)
+                        print("Resistance =", result, "Ω")
+                        return
+
                     case "BYVOLTAGE":
-                        print("Resistance by voltage selected")
-                        break
+                        print("Resistance from voltage and power")
+                        voltage = float(input("Enter voltage (V): "))
+                        power = float(input("Enter power (W): "))
+                        result = Resistance.byVoltage(voltage, power)
+                        print("Resistance =", result, "Ω")
+                        return
+
                     case "BYPOWER":
-                        print("Resistance by power selected")
-                        break
+                        print("Resistance from power and current")
+                        power = float(input("Enter power (W): "))
+                        current = float(input("Enter current (A): "))
+                        result = Resistance.byPower(power, current)
+                        print("Resistance =", result, "Ω")
+                        return
+
                     case _:
-                        print("Invalid selection for Resistance")
-                        break
+                        print("Invalid Resistance option.")
+                        return
 
+            # --------------------- INVALID MAIN MENU -----------------------
             case _:
-                print("Invalid component type. Please try again.")
-                break
+                print("Invalid component type. Please try again.\n")
 
-
-# Run the program
 message()
 components()

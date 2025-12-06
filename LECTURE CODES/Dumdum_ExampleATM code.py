@@ -1,6 +1,7 @@
 import time
+
 amount = 0
-balance = -1
+balance = 1000
 PIN = "1232"
 
 def welcome_message():
@@ -33,8 +34,8 @@ def valid():
 
 
 def transaction_selection():
-    transaction = input("Please select your transaction (withdraw/balance): ").lower()
-    return transaction
+    return input("Please select your transaction (withdraw/balance): ").lower()
+
 
 def transaction_validation(amount, balance):
     if balance >= amount:
@@ -45,16 +46,15 @@ def transaction_validation(amount, balance):
 
 
 def card_ejection():
-    # call driver for card ejection mechanism
     print("Card is ejected. Please get your card")
     quit()
 
-def receipt():
+
+def receipt(amount, balance):
     time.sleep(1)
     print("Printing Receipt")
     time.sleep(1)
     print("-----------------")
-    time.sleep(1)
     print("Your transaction details:")
     print("Amount:", str(amount))
     print("Balance:", str(balance))
@@ -62,47 +62,51 @@ def receipt():
     time.sleep(1)
 
 
+# ========================
+#       MAIN PROGRAM
+# ========================
 
 while True:
     welcome_message()
-    isCardInserted = input("Is Card Inserted? (y/n): ").lower()  # SENSOR
-    if not card_reader(isCardInserted):  # FALSE
+
+    isCardInserted = input("Is Card Inserted? (y/n): ").lower()
+    if not card_reader(isCardInserted):
         continue
 
     time.sleep(1)
 
     print("INPUT YOUR PIN NUMBER")
-    if not valid():  # FALSE
+    if not valid():
         continue
 
     print("-------------")
-
     time.sleep(1)
 
-    transaction = transaction_selection()
+    while True:  # loop for balance inquiry
+        transaction = transaction_selection()
 
-    if transaction == "withdraw":
-        amount = int(input("Please enter your amount: "))
-        if transaction_validation(amount, balance):
-            balance -= amount  # decrease the balance
-            print("Withdraw Operation Successful. New Balance:", str(balance))
-            receipt = receipt()
-            time.sleep(1)
-        else:
-            print("Transaction failed due to insufficient balance.")
-            break
+        if transaction == "withdraw":
+            amount = int(input("Please enter your amount: "))
 
-    elif transaction == "balance":
+            if transaction_validation(amount, balance):
+                balance -= amount
+                print("Withdraw Operation Successful. New Balance:", str(balance))
+                receipt(amount, balance)
+                time.sleep(1)
+                card_ejection()  # eject card ONLY after withdrawal
+            else:
+                print("Transaction failed due to insufficient balance.")
+                break
+
+        elif transaction == "balance":
             print("------------------")
-            time.sleep(1)
             print("Your current balance:", str(balance))
             print("------------------")
+            receipt(0, balance)
+            print("You may continue your transaction.")
+            print("--------------------------------")
             time.sleep(1)
-            receipt()
-    else:
-        print("Invalid transaction")
+            # Does NOT eject card — loops back to transaction menu
 
-    card_ejection()
-
-
-
+        else:
+            print("Invalid transaction")
