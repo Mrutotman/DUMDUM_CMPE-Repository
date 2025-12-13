@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "dumdumproject",
+  "private_key_id": "6b6f1ad2511cbf2c75f81257e28977fcc47e500a",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQD4nJJyZOXgV5S0\nLaBEkmscKp45RnAk9J5DzOQTJUoGDb+wn8PRjKdDz9ZMXZaeSkLbnmaVpP7K/ZRA\n3TXZmr5QIElYm++THviM9Wtjs4pCQoZ3NoiGX+jevF7EC2UEKzagDSsg5JvbuX3n\nKwh9JMFTIwlGU7UbzIG1xG8fOnOnjylTL9nYlDohGD69h1CNNaCLapB/Pit88w7E\ntQUB1pXPslzBUH1WMxCP3527e72s0+NJGo0VlpKMePBULEePCFMuwJKZm5HyvbO+\nBG/MfhQTVLgUG8N8JXCrVz14PDBMTCGKynb8FsufgtnooN+SOTXEOB6Y72s49gxZ\neslH8nXpAgMBAAECggEAd74GBUYWuErGq0/MgSqan1rhkYmdKxeNAO/3LEeKE0dc\n/Ae/a7cYux8oQujSylPPRvNQyqPJOuEPHnzNWo1fO72JRj35Er3YjiAIxOEtZwOe\nu12PPVWFln5ZEIjCc1MTANzG2JVzgk2h2A1QjeH9oXrfFTntIcIK+Y7uzLY9DUcC\nY7gplpegue40IU+Ff8yimVXPrJ8TirVvlrzaHdeXB7QipSkMqcwi+2YwEZ2UvHlS\neyImcWoCCPNCpbsIvs6l2br45I3qvD1qEuFRAKm3CFNvQAQybwbYO3XoihjG2Ed+\nERma0WLfxtBLg/98yDmPDW2MUie9x6XrLh1l7bCOdwKBgQD+RfFgRt4zfzp0ZyfH\nQTQYqAz4sNJLltGPIWWZ2mDdzDOVfZCM/n6lhaOZjl7cSw5UyMhPY3NKGWIUxTWm\nNdNH1P3chzbCuYl+onfimCspxmovLPw1qa8PIWEoOP++yvWmgIqwf14cyfOhvIfh\nyEqAid4nmnzH9rNN0DPjnSDTCwKBgQD6TMlSWsy6RFU6Re2+qKzYg+C1kBrxQJZW\ns2B5r5cwt97+d8Q48AGewgdWWHKx3UGEIgDodT1Eq6vT3bcamJayb7IjHsy9AcD6\n+dcXt6EHw6HiOmPqI0cLUE4mmkYRBtslsDmzlzczEn+ReoCPM5em0gatCT3rHYpg\n2Q0vZ1zzWwKBgA2wJjZQmlWbW8I4a2PGls9c/JXGrwtyqwVRfu6xWtWV0JETmVx9\ntsOiVhRGHcUuJS9bP61GZUZv51/G3gR8kUskpCXjAYeqBUTT6jBAkNJG5CB2A33A\nDLR7z4ciymGy+1ZjRRQLRz21gXALfiUhayFQSq1HG8CH/08JDkIKi2HRAoGAN/pu\nWAXInavkp7i1+Br/NRkha1nEPMpmFRPe8rgLhzDIJX8hml5K7neUboIvfInwOh3k\nuBhoUHBYaHTAm6keot+KJoKf5XF7+GVh7oL596OQE+ldKSMko2odYFLGcs5muqIT\n9Y9PIBP2BdIw6FXwh7WXGqHjgC7GIOzKHxzt09sCgYBjh+oy/QRxezKWPLGK8LYh\nqmIA0g73yjUAQ05E9LMGdeTr6R6a58tgfVGnXJNweVIJtCMg5yvQP8BvuRoXsRav\nVj6+IL6YTQn3QsscUzgdE3FpEYzv+hm9pMa+1c9YRyBxa37n2oWtDELSFhU3S1m8\nqfCe/CpLuqrY1GVjfBWNNg==\n-----END PRIVATE KEY-----\n",
+  "client_email": "dumdumproject1@dumdumproject.iam.gserviceaccount.com",
+  "client_id": "110944266371071128014",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/dumdumproject1%40dumdumproject.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
