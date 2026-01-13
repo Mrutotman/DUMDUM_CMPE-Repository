@@ -13,6 +13,7 @@ Complete:
 - Data Structures (10/25/25)
 - Control Flow (11/08/25)
 - Functions & Modularity (11/22/25)
+- Integration & Mini Project  (01/10/26)
 
 Incomplete:
 - Errors, Exceptions & Debugging  
@@ -22,7 +23,6 @@ Incomplete:
 - GUI & Web Introduction  
 - Object-Oriented Programming (OOP) Basics  
 - OOP Advanced  
-- Integration & Mini Project  
 
 ## LINKS
 
