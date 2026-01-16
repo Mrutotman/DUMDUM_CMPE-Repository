@@ -13,15 +13,15 @@ Complete:
 - Data Structures (10/25/25)
 - Control Flow (11/08/25)
 - Functions & Modularity (11/22/25)
+- Object-Oriented Programming (OOP) Basics (12/06/25)
+- File Handling  (12/13/25)
 - Integration & Mini Project  (01/10/26)
 
 Incomplete:
 - Errors, Exceptions & Debugging  
 - Midterms Review  
-- File Handling  
 - Automation & Scripting  
 - GUI & Web Introduction  
-- Object-Oriented Programming (OOP) Basics  
 - OOP Advanced  
 
 ## LINKS
