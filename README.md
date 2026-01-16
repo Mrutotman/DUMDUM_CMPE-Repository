@@ -1,7 +1,5 @@
-# I AM SO SIGMA 
-HELLO MY NAME IS RED COLBY S. DUMDUM, I AM SO SIGMA AND THIS IS FOR MY COMPUTER PROGRAMMING COURSE AKA CMPE 012.
-BACHELOR OF SCIENCE IN ELECTRONICS ENGINEERING, PUP STA.MESA
-
+# FINAL PROJECT
+ELECTRIC BILL CALCULATOR CONSOLE AND WITH GUI (VIBE CODED)
 
 ## MODULES SO FOR IN MY COURSE
 Complete:
@@ -14,7 +12,9 @@ Complete:
 - Control Flow (11/08/25)
 - Functions & Modularity (11/22/25)
 - Object-Oriented Programming (OOP) Basics (12/06/25)
+- Serial Communication (12/06/25)
 - File Handling  (12/13/25)
+- Integration & Mini Project  (01/10/26)
 
 Incomplete:
 - Errors, Exceptions & Debugging  
@@ -22,7 +22,7 @@ Incomplete:
 - Automation & Scripting  
 - GUI & Web Introduction  
 - OOP Advanced  
-- Integration & Mini Project  
+
 
 ## LINKS
 
