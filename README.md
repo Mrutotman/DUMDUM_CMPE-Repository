@@ -14,6 +14,7 @@ Complete:
 - Control Flow (11/08/25)
 - Functions & Modularity (11/22/25)
 - Object-Oriented Programming (OOP) Basics (12/06/25)
+- Serial Communication (12/06/25)
 - File Handling  (12/13/25)
 - Integration & Mini Project  (01/10/26)
 
